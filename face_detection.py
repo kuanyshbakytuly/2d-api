@@ -2,7 +2,6 @@ import os
 import cv2 as cv
 import numpy as np
 
-'models/2D_models/EfficientNetB3-saved-model-30-val_acc-1.00.hdf5'
 folder_to_models = '/Users/kuanyshbakytuly/Desktop/Relive/2d_api/models/face_detector'
 
 proto_path = os.path.sep.join([f"{folder_to_models}/deploy.prototxt"])

@@ -59,7 +59,7 @@ async def verify_face(
 
 
 async def main():
-    camera_image_path = '/Users/kuanyshbakytuly/Desktop/Relive/2d_api/images/Photo on 18.04.2023 at 23.58.jpg'
+    camera_image_path = 'images/Photo on 18.04.2023 at 23.58.jpg'
 
     camera_image: np.ndarray = cv2.imread(camera_image_path)
     image_bytes = cv2.imencode('.jpg', camera_image)[1].tobytes()

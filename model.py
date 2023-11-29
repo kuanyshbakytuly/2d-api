@@ -3,7 +3,7 @@ from tensorflow.keras.applications import efficientnet
 from tensorflow.keras.optimizers.legacy import Adam
 
 
-def get_model_2d(path_to_model='/Users/kuanyshbakytuly/Desktop/Relive/2d_api/models/2D_models/EfficientNetB3-saved-model-30-val_acc-1.00.hdf5'):
+def get_model_2d(path_to_model='/models/2D_models/EfficientNetB3-saved-model-30-val_acc-1.00.hdf5'):
     efficienb3 = efficientnet.EfficientNetB3(weights='imagenet', 
                                          include_top=False, 
                                          input_shape=(300,300,3), 

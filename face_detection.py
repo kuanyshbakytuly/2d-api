@@ -2,7 +2,7 @@ import os
 import cv2 as cv
 import numpy as np
 
-folder_to_models = '/Users/kuanyshbakytuly/Desktop/Relive/2d_api/models/face_detector'
+folder_to_models = '/models/face_detector'
 
 proto_path = os.path.sep.join([f"{folder_to_models}/deploy.prototxt"])
 model_path = os.path.sep.join([f"{folder_to_models}/res10_300x300_ssd_iter_140000.caffemodel"])

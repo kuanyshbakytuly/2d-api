@@ -19,7 +19,7 @@ face_liveness_model = get_model_2d()
 CLASSES = ['cce', 'hp', 'print1', 'print2', 'real']
 
 
-def predict_image_by_2d(
+def predict(
         frame: np.ndarray,
 ):
     
@@ -46,7 +46,7 @@ async def passive_liveness(
         cv2.COLOR_BGR2RGB,
     )
 
-    result = predict_image_by_2d(camera_image)
+    result = predict(camera_image)
     if result is None:
         raise HTTPException(status_code=400, detail="Face not found in the input image")
 

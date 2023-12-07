@@ -22,12 +22,12 @@ CLASSES = ['cce', 'hp', 'print1', 'print2', 'real']
 def predict_image_by_2d(
         frame: np.ndarray,
 ):
-    # frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+    
     face = face_detection(frame)
     if face is None:
         return None
 
-    image = cv2.resize(face, (300, 300))  # TODO check for the output of face detection
+    image = cv2.resize(face, (300, 300)) 
     liveness_prediction: np.ndarray = face_liveness_model.predict(np.expand_dims(image / .255, 0))
     return CLASSES[np.argmax(liveness_prediction)]
 
